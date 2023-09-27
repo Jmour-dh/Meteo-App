@@ -1,0 +1,85 @@
+// Définition des variables
+$title-font-size: 23px;
+$title-font-weight: 700;
+$background-color: #f5f5f5;
+$border-radius: 15px;
+$height: 40px;
+$margin: 5px;
+$icon-width: 40px;
+$font-size: 14px;
+$padding: 5px 20px;
+$color: #212121;
+$font-weight: 600;
+$margin-left: 15px;
+$margin-right: 15px;
+$color-secondary: #757575;
+$grid-gap: 15px;
+$height-details: 30px;
+
+// Utilisation des variables dans le code SCSS
+.title {
+  font-size: $title-font-size;
+  font-weight: $title-font-weight;
+}
+
+.dailyItem {
+  background-color: $background-color;
+  border-radius: $border-radius;
+  height: $height;
+  margin: $margin;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size;
+  padding: $padding;
+
+  .iconSmall {
+    width: $icon-width;
+  }
+
+  .day {
+    cursor: inherit;
+    color: $color;
+    flex: 1 1;
+    font-weight: $font-weight;
+    margin-left: $margin-left;
+  }
+
+  .description {
+    cursor: inherit;
+    flex: 1 1;
+    margin-right: $margin-right;
+    text-align: right;
+  }
+
+  .minMax {
+    color: $color-secondary;
+  }
+}
+
+.dailyDetailsGrid {
+  grid-row-gap: 0;
+  grid-column-gap: $grid-gap;
+  -webkit-column-gap: $grid-gap;
+  column-gap: $grid-gap;
+  display: grid;
+  flex: 1 1;
+  grid-template-columns: auto auto;
+  padding: $padding;
+  row-gap: 0;
+}
+
+.dailyDetailsGridItem{
+  align-items: center;
+  display: flex;
+  height: $height-details;
+  justify-content: space-between;
+
+  label:first-child {
+    color: $color-secondary;
+  }
+
+  label:last-child {
+    color: $color;
+  }
+}
